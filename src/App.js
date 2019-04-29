@@ -14,16 +14,30 @@ const header = <h1 id={title.id} className="colored"> {title.first} {title.secon
 
 // Elementler ekranda gorunmesi istenen en kucuk yapitasidir
 // React DOM ise bu elementleri guncelleyerek isleri yurutur
+// Bir kez render edilmis element bir daha degismez, yeni bir render olusturmak zorundasiniz
+// React Virtual Dom uzerinde islem yapar ve gercek dom ile farkli olan kismi tekrar render eder
 const element = <p>Merhaba dunya!</p>;
 
 // App bu haliyle sadece bir HTML blok return ediyor
-function App() {
+// Bu fonksiyon bir componenttir ve site bir puzzle ise bu da bir parcadir diyebiliriz
+function App(props) {
+    // Her component, render islemi icin bir JSX return eder
     return (
         <div>
             <header>{header}</header>
-            {element}
+            {element} ( yada {props.planet} )
         </div>
     );
 }
+
+/*
+Componentler ES6 icin class olarak da tanimlanabilirler, fakat fonksiyon olabiliyorsa class yapilmamalidir
+constructor, props, state gibi ozellikler classlar ile kullanilir.
+class App extends React.Component {
+    render() {
+        return <h1>Merhaba {this.props.name}</h1>;
+    }
+}
+ */
 
 export default App;
