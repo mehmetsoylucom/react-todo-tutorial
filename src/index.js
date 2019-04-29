@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 import * as serviceWorker from './serviceWorker';
+import Clock from "./Clock";
 
 // Bir element yani zamanda component de olabilir
 // componentlere veri gonderilebilir.
@@ -18,15 +19,20 @@ const appComponent = <App planet="Mars"/>;
 // DOM render import edilen App'i root id sahibi div altinda render ediyor
 // JSX formatinda gelen elementler React uzerinden bir JS nesnesine donusturulerek kullaniliyor
 // Bunun anlami JSON olan veri kullanici tarafinda redux ile depolanabilir ve yonetilebilir
-ReactDOM.render(
-    <div>
-        <App planet="Pluton"/>
-        {appComponent}
-    </div>,
-    // Root dugumu genellikle bir tanedir ve kapsayicidir
-    // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
-    // Tum react islemleri bunun icerisinde gerceklesiyor
-    document.getElementById('root')
-);
+function tick() {
+    ReactDOM.render(
+        <div>
+            <App planet="Pluton"/>
+            {appComponent}
+            <Clock date={new Date()}/>
+        </div>,
+        // Root dugumu genellikle bir tanedir ve kapsayicidir
+        // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
+        // Tum react islemleri bunun icerisinde gerceklesiyor
+        document.getElementById('root')
+    );
+}
+
+setInterval(tick, 1000);
 
 serviceWorker.unregister();
