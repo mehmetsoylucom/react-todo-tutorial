@@ -9,7 +9,7 @@ const title = {
     second: 'with React',
     id: "titleId"
 };
-// JSX icin attr degerleri degisken ise "" arasinda yaziliyor
+// JSX icin attr degerleri degisken ise "" arasinda yazilMIyor!
 const header = <h1 id={title.id} className="colored"> {title.first} {title.second} : Ders {2 - 1}</h1>;
 
 // App bu haliyle sadece bir HTML blok return ediyor
