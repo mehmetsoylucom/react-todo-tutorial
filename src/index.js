@@ -24,7 +24,7 @@ function tick() {
         <div>
             <App planet="Pluton"/>
             {appComponent}
-            <Clock date={new Date()}/>
+            <Clock />
         </div>,
         // Root dugumu genellikle bir tanedir ve kapsayicidir
         // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
