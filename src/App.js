@@ -1,4 +1,6 @@
 import React from 'react';
+// Kuolanilacak componentler import ediliyor
+import Welcome from './Welcome';
 
 // Burada HTML ya da string degil, JSX olusturulmus
 // JSX react dom icin render edilen bir format ve html ile ayni degil
@@ -24,8 +26,10 @@ function App(props) {
     // Her component, render islemi icin bir JSX return eder
     return (
         <div>
+            Componentler icinde baska componentler cagrilabilir
+            <Welcome name="App Component!"/>
             <header>{header}</header>
-            {element} ( yada {props.planet} )
+            {element}
         </div>
     );
 }
