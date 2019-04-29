@@ -12,11 +12,16 @@ const title = {
 // JSX icin attr degerleri degisken ise "" arasinda yazilMIyor!
 const header = <h1 id={title.id} className="colored"> {title.first} {title.second} : Ders {2 - 1}</h1>;
 
+// Elementler ekranda gorunmesi istenen en kucuk yapitasidir
+// React DOM ise bu elementleri guncelleyerek isleri yurutur
+const element = <p>Merhaba dunya!</p>;
+
 // App bu haliyle sadece bir HTML blok return ediyor
 function App() {
     return (
         <div>
             <header>{header}</header>
+            {element}
         </div>
     );
 }
