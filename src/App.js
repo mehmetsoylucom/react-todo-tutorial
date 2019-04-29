@@ -6,9 +6,11 @@ import React from 'react';
 // değiştiğini kontrol eder ve bunları arayüze aktarır.
 const title = {
     first: 'To Do App',
-    second: 'with React'
+    second: 'with React',
+    id: "titleId"
 };
-const header = <h1> {title.first} {title.second} : Ders {2 - 1}</h1>;
+// JSX icin attr degerleri degisken ise "" arasinda yaziliyor
+const header = <h1 id={title.id} className="colored"> {title.first} {title.second} : Ders {2 - 1}</h1>;
 
 // App bu haliyle sadece bir HTML blok return ediyor
 function App() {
