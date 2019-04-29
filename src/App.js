@@ -1,9 +1,10 @@
 import React from 'react';
 
+// App bu haliyle sadece bir HTML blok return ediyor
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"></header>
+    <div>
+      <header>To Do App with React</header>
     </div>
   );
 }
