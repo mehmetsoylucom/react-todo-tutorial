@@ -10,6 +10,7 @@ import * as serviceWorker from './serviceWorker';
 import Clock from "./Clock";
 import Eventer from "./Eventer";
 import EventerParameter from "./EventParameter";
+import RenderCondition from "./RenderCondition";
 
 // Bir element yani zamanda component de olabilir
 // componentlere veri gonderilebilir.
@@ -33,6 +34,8 @@ function tick() {
             <Eventer />
             <hr />
             <EventerParameter />
+            <hr />
+            <RenderCondition username="aa" />
         </div>,
         // Root dugumu genellikle bir tanedir ve kapsayicidir
         // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
