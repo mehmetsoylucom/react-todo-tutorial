@@ -8,6 +8,7 @@ import App from './App';
 
 import * as serviceWorker from './serviceWorker';
 import Clock from "./Clock";
+import Eventer from "./Eventer";
 
 // Bir element yani zamanda component de olabilir
 // componentlere veri gonderilebilir.
@@ -25,6 +26,7 @@ function tick() {
             <App planet="Pluton"/>
             {appComponent}
             <Clock />
+            <Eventer />
         </div>,
         // Root dugumu genellikle bir tanedir ve kapsayicidir
         // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
