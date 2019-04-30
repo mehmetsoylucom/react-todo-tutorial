@@ -9,6 +9,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Clock from "./Clock";
 import Eventer from "./Eventer";
+import EventerParameter from "./EventParameter";
 
 // Bir element yani zamanda component de olabilir
 // componentlere veri gonderilebilir.
@@ -24,9 +25,14 @@ function tick() {
     ReactDOM.render(
         <div>
             <App planet="Pluton"/>
+            <hr />
             {appComponent}
+            <hr />
             <Clock />
+            <hr />
             <Eventer />
+            <hr />
+            <EventerParameter />
         </div>,
         // Root dugumu genellikle bir tanedir ve kapsayicidir
         // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor

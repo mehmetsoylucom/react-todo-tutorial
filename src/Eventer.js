@@ -44,4 +44,25 @@ class Eventer extends React.Component {
     }
 }
 
+/**
+ * >>> Constructorde bind etmek onerilendir. <<<
+ *
+ * JavaScript’te, class fonskyionları varsayılan olarak bağlı değildir.
+ * this.handleClick‘i bind etmeyi (bağlamayı) unutursanız ve onClick'e
+ * iletirseniz, fonksiyon çağrıldığında bu undefined olur.
+ *
+ *
+ * Fonksiyon boyle yazilsaydi, bir degisken icinde bir fonksiyon olsaydi bind gerekmeyecekti.
+ *
+ * handleClick = () => {
+ *   console.log(this);
+ * }
+ *
+ * Ya da asagidaki gibi cagrildiginda normal yazilmis bir fonksiyona ulasabilecekti.
+ *
+ * <button onClick={(e) => this.handleClick(e)}>
+ *
+ * Bu durum JS'de fonksiyonlarin islemesi ile ilgilidir.
+ */
+
 export default Eventer;
