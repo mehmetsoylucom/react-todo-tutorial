@@ -53,4 +53,58 @@ class Clock extends React.Component {
     }
 }
 
+/**
+ State Hakkinda
+
+ => State'i Doğrudan Değiştirmeyin
+
+ this.state.comment = x kullanimi sadece constructor icindir.
+ diger methodlarda this.setState({comment: 'Merhaba'}); seklinde yazilmalidir.
+
+ => State Güncellemeleri Asenkron Olabilir
+
+ this.props ve this.state eşzamansız olarak güncellenebilir.
+
+ this.setState({
+  counter: this.state.counter + this.props.increment,
+ });
+
+ yerine asagidaki gibi prevState eski state, props guncel propslar olarak cagrilip kullanilir
+
+ // Doğru Kullanım
+ this.setState((prevState, props) => ({
+        counter: prevState.counter + props.increment
+ }));
+
+ => State'leri Toplu Güncelleştirmek
+
+ Birden fazla state aynı anda güncellenebilir.
+
+ constructor(props) {
+    super(props);
+    this.state = {
+       posts: [],
+       comments: []
+    };
+ }
+
+ Ayrıca bunları ayrı setState() çağrılarıyla bağımsız olarakta güncelleyebilirsiniz:
+
+ componentDidMount() {
+      fetchPosts().then(response => {
+        this.setState({
+          posts: response.posts
+        });
+      });
+
+      fetchComments().then(response => {
+        this.setState({
+          comments: response.comments
+        });
+      });
+ }
+
+ this.setState({comments}) sadece this.state.comments guncelller, this.state.posts kismini güncellenmez.
+*/
+
 export default Clock;
