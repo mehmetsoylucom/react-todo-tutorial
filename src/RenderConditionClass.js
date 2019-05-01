@@ -35,6 +35,7 @@ class RenderConditionClass extends React.Component {
         // let ile tanimlandigi blok disinda o degisken kullanilamaz.
         // buna block scope denir, if, while gibi blocklardir.
         let button = null;
+        let button2 = null;
 
         // Render oncesi belirli bir kisim icin if kullanilip o kisim olusturuluyor
         if (!isLoggedIn) {
@@ -43,9 +44,23 @@ class RenderConditionClass extends React.Component {
             button = <button onClick={this.handleLogoutClick}>Logout</button>
         }
 
+        // short if kullanimi
+        button2 = !isLoggedIn ? <button onClick={this.handleLoginClick}>short if Login</button> :
+            <button onClick={this.handleLogoutClick}>short if Logout</button>;
+
         return (
             <div>
                 {button}
+                <hr/>
+                {button2}
+                <hr/>
+                {// render icinde short if kullanimi
+                    isLoggedIn ? (
+                        <button onClick={this.handleLogoutClick}>in render short Logout</button>
+                    ) : (
+                        <button onClick={this.handleLoginClick}>in render short Login</button>
+                    )
+                }
             </div>
         );
     }
