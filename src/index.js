@@ -12,6 +12,7 @@ import Eventer from "./Eventer";
 import EventerParameter from "./EventParameter";
 import RenderCondition from "./RenderCondition";
 import RenderConditionClass from "./RenderConditionClass";
+import PreventRender from "./PreventRender";
 
 // Bir element yani zamanda component de olabilir
 // componentlere veri gonderilebilir.
@@ -39,6 +40,8 @@ function tick() {
             <RenderCondition username="aa" />
             <hr />
             <RenderConditionClass />
+            <hr />
+            <PreventRender renderMe={true}/>
         </div>,
         // Root dugumu genellikle bir tanedir ve kapsayicidir
         // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
