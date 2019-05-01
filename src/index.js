@@ -11,6 +11,7 @@ import Clock from "./Clock";
 import Eventer from "./Eventer";
 import EventerParameter from "./EventParameter";
 import RenderCondition from "./RenderCondition";
+import RenderConditionClass from "./RenderConditionClass";
 
 // Bir element yani zamanda component de olabilir
 // componentlere veri gonderilebilir.
@@ -36,6 +37,8 @@ function tick() {
             <EventerParameter />
             <hr />
             <RenderCondition username="aa" />
+            <hr />
+            <RenderConditionClass />
         </div>,
         // Root dugumu genellikle bir tanedir ve kapsayicidir
         // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
