@@ -13,6 +13,7 @@ import EventerParameter from "./EventParameter";
 import RenderCondition from "./RenderCondition";
 import RenderConditionClass from "./RenderConditionClass";
 import PreventRender from "./PreventRender";
+import ListAndKey1 from "./ListAndArray1";
 
 // Bir element yani zamanda component de olabilir
 // componentlere veri gonderilebilir.
@@ -28,20 +29,22 @@ function tick() {
     ReactDOM.render(
         <div>
             <App planet="Pluton"/>
-            <hr />
+            <hr/>
             {appComponent}
-            <hr />
-            <Clock />
-            <hr />
-            <Eventer />
-            <hr />
-            <EventerParameter />
-            <hr />
-            <RenderCondition username="aa" />
-            <hr />
-            <RenderConditionClass />
-            <hr />
+            <hr/>
+            <Clock/>
+            <hr/>
+            <Eventer/>
+            <hr/>
+            <EventerParameter/>
+            <hr/>
+            <RenderCondition username="aa"/>
+            <hr/>
+            <RenderConditionClass/>
+            <hr/>
             <PreventRender renderMe={true}/>
+            <hr/>
+            <ListAndKey1 numbers={[1, 2, 3, 4]}/>
         </div>,
         // Root dugumu genellikle bir tanedir ve kapsayicidir
         // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
