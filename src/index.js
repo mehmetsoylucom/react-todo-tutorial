@@ -15,6 +15,7 @@ import RenderConditionClass from "./RenderConditionClass";
 import PreventRender from "./PreventRender";
 import ListAndKey1 from "./ListAndKey1";
 import ListAndKey2 from "./ListAndKey2";
+import FormSample from "./FormSample";
 
 // Bir element yani zamanda component de olabilir
 // componentlere veri gonderilebilir.
@@ -48,6 +49,8 @@ function tick() {
             <ListAndKey1 numbers={[1, 2, 3, 4]}/>
             <hr />
             <ListAndKey2 numbers={[1, 2, 3, 4]}/>
+            <hr />
+            <FormSample />
         </div>,
         // Root dugumu genellikle bir tanedir ve kapsayicidir
         // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
