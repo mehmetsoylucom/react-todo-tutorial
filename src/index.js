@@ -13,7 +13,8 @@ import EventerParameter from "./EventParameter";
 import RenderCondition from "./RenderCondition";
 import RenderConditionClass from "./RenderConditionClass";
 import PreventRender from "./PreventRender";
-import ListAndKey1 from "./ListAndArray1";
+import ListAndKey1 from "./ListAndKey1";
+import ListAndKey2 from "./ListAndKey2";
 
 // Bir element yani zamanda component de olabilir
 // componentlere veri gonderilebilir.
@@ -45,6 +46,8 @@ function tick() {
             <PreventRender renderMe={true}/>
             <hr/>
             <ListAndKey1 numbers={[1, 2, 3, 4]}/>
+            <hr />
+            <ListAndKey2 numbers={[1, 2, 3, 4]}/>
         </div>,
         // Root dugumu genellikle bir tanedir ve kapsayicidir
         // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
