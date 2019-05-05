@@ -16,7 +16,8 @@ class FormSample extends React.Component {
 
     handleChange(event) {
         // Fonksiyonu gonderen elemana ulasim sekli event.target
-        this.setState({value: event.target.value});
+        // Burada ekstra olarak buyuk harfe cevirdik
+        this.setState({value: event.target.value.toUpperCase()});
     }
 
     handSubmit(event) {
