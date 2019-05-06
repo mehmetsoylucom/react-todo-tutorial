@@ -17,6 +17,8 @@ import ListAndKey1 from "./ListAndKey1";
 import ListAndKey2 from "./ListAndKey2";
 import FormSample from "./FormSample";
 import FormSampleMultiple from "./FormSampleMultiple";
+import Containment from "./Containment";
+import ContainmentInProps from "./ContainmentInProps";
 
 // Bir element yani zamanda component de olabilir
 // componentlere veri gonderilebilir.
@@ -54,12 +56,13 @@ ReactDOM.render(
         <FormSample/>
         <hr/>
         <FormSampleMultiple/>
+        <hr/>
+        <ContainmentInProps/>
     </div>,
     // Root dugumu genellikle bir tanedir ve kapsayicidir
     // Dilenirse birden fazla olabilir, ayni uygulama birden cok render yapabiliyor
     // Tum react islemleri bunun icerisinde gerceklesiyor
     document.getElementById('root')
 );
-
 
 serviceWorker.unregister();
