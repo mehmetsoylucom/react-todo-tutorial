@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import Containment from "./Containment";
 import Welcome from "./Welcome";
 
