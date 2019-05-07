@@ -1,5 +1,4 @@
-import React from 'react';
-import Welcome from "./Welcome";
+import React from 'react'; 
 
 /**
  * Component yapisi kapsayici bir eleman kullanmadan sadece <tr><td> gibi bir cok satiri
