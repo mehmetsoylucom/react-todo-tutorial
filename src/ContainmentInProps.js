@@ -8,10 +8,14 @@ class ContainmentInProps extends React.Component {
     }
 
     // Containment isimli componen baska bir componenti props gonderip cagrabiliyor
+    //
     render() {
         return (
             <div>
-                <Containment comp={<Welcome name="Hello from ContainmentInProps!"/>}/>
+                <Containment comp={<Welcome name="Hello from ContainmentInProps!"/>}>
+                    <button>Bu buton children ornegi</button>
+                    <div>Bu yazi ContainmentInProps componentinden <br /> Containment componentine gonderildi.</div>
+                </Containment>
             </div>
         );
     }

@@ -9,6 +9,8 @@ function Containment(props) {
             <hr/>
             {props.comp}
             <hr/>
+
+            {props.children}
         </div>
     );
 
